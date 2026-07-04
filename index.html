@@ -1,114 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wheeler Fortune Notary - Professional notarization services">
-    <title>Wheeler Fortune Notary | Professional Notarization Services</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Entry-Level Career Coaching – Business Plan & Assets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Entry-level career coaching packages, interview prep, and enterprise readiness audit." />
+  <style>
+    :root {
+      --primary: #1f4b99;
+      --accent: #f4b41a;
+      --bg: #f7f9fc;
+      --text: #222;
+      --muted: #666;
+      --card-bg: #ffffff;
+      --border: #dde3f0;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo span {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #1f4b99 0%, #243b53 60%, #111827 100%);
+      color: #fff;
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      margin-bottom: 1.5rem;
+      color: #e5e7eb;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #f59e0b;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #e5e7eb;
+      border-color: #9ca3af;
+    }
+
+    .btn-outline:hover {
+      background: #111827;
+      border-color: #e5e7eb;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+
+    p {
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      padding: 1rem 1.1rem;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      margin: 0.25rem 0 0.75rem;
+    }
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    .template-block {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-radius: 0.75rem;
+      padding: 1rem 1.1rem;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+
+    .template-block h3 {
+      color: #facc15;
+    }
+
+    .template-block code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #f3f4f6;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h1>Wheeler Fortune Notary</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <header>
+    <div class="logo">
+      <!-- Replace src with your actual logo path or URL -->
+      <img src="assets/logo.png" alt="Coaching Brand Logo" />
+      <span>Entry-Level Career Coaching</span>
+    </div>
+    <nav>
+      <a href="#packages">Packages</a>
+      <a href="#webpage">Webpage Copy</a>
+      <a href="#assets">Templates</a>
+      <a href="#audit">Readiness Audit</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="container">
-            <h2>Professional Notary Services</h2>
-            <p>Fast, reliable, and trustworthy notarization for all your document needs</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
-        </div>
-    </header>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Land Your First Corporate Role Without Sending 500 Resumes.</h1>
+      <p>
+        Structured coaching, interview prep, and enterprise readiness audits for ambitious entry-level candidates
+        who are ready to be taken seriously.
+      </p>
+      <div class="hero-cta">
+        <a href="#packages" class="btn btn-primary">View Coaching Packages</a>
+        <a href="#audit" class="btn btn-outline">Explore Readiness Audit</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Document Notarization</h3>
-                    <p>Professional notarization of legal documents, affidavits, and certificates for all purposes.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Acknowledgments</h3>
-                    <p>Verify signatures and identity for mortgages, real estate transactions, and legal agreements.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Certified Copies</h3>
-                    <p>Obtain certified copies of important documents with official notary certification.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Oath Administration</h3>
-                    <p>Professional administration of oaths and affirmations for legal proceedings and official use.</p>
-                </div>
-            </div>
-        </div>
+  <main>
+    <!-- 1. Entry-Level Business Strategy -->
+    <section id="packages">
+      <h2>1. Entry-Level Business Strategy</h2>
+      <p>
+        For this demographic, sell the result (getting the interview, passing the screen), not the time
+        (hourly coaching). 
+      </p>
+
+      <h3>Phase 1: Coaching Packages</h3>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="pill">Async Resume Audit</span>
+          <h3>The “Pass the Filter” Resume Audit</h3>
+          <p><strong>Format:</strong> Flat-fee, asynchronous service.</p>
+          <ul>
+            <li><strong>Deliverable:</strong> 10-minute video screen-recording critique.</li>
+            <li><strong>Bonus:</strong> Clean, ATS-compliant resume template tailored to entry-level corporate roles.</li>
+            <li><strong>Outcome:</strong> Resume passes automated filters and recruiter scans for target roles.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="pill">Live Interview Prep</span>
+          <h3>The First-Round Interview Prep</h3>
+          <p><strong>Format:</strong> 45-minute live mock interview.</p>
+          <ul>
+            <li><strong>Focus:</strong> Behavioral questions aligned to corporate competencies.</li>
+            <li><strong>Feedback:</strong> Real-time coaching on structure, clarity, and confidence.</li>
+            <li><strong>Outcome:</strong> Candidate can reliably pass first-round behavioral screens.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="pill">3-Week Sprint</span>
+          <h3>The “Break Into Corporate” Sprint</h3>
+          <p><strong>Format:</strong> 3-week structured program.</p>
+          <ul>
+            <li><strong>Week 1:</strong> Full resume rewrite for target corporate roles.</li>
+            <li><strong>Week 2:</strong> LinkedIn profile optimization and recruiter-facing headline.</li>
+            <li><strong>Week 3:</strong> Networking strategy and outreach scripts.</li>
+            <li><strong>Outcome:</strong> Candidate has a cohesive, professional brand and a repeatable outreach system.</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Wheeler Fortune Notary is committed to providing professional, efficient, and trustworthy notarization services. With years of experience in the field, we ensure that all documents are properly notarized in compliance with state regulations.</p>
-                    <p>Our team is dedicated to making the notarization process as smooth and convenient as possible for our clients.</p>
-                </div>
-                <div class="about-features">
-                    <ul>
-                        <li>✓ Experienced notary professionals</li>
-                        <li>✓ Fast turnaround times</li>
-                        <li>✓ Competitive pricing</li>
-                        <li>✓ Flexible scheduling</li>
-                        <li>✓ Licensed and bonded</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <!-- 2. Webpage Strategy -->
+    <section id="webpage">
+      <h2>2. Webpage Strategy</h2>
+      <p>
+        Your webpage must be mobile-first, highly direct, and urgently address candidate frustration. 
+      </p>
+
+      <h3>Hero & Problem Statement</h3>
+      <div class="card">
+        <p><strong>Hero Line:</strong> “Land Your First Corporate Role Without Sending 500 Resumes.”</p>
+        <p><strong>The Problem:</strong></p>
+        <p>
+          You have the degree, but every entry-level job demands “1–3 years of experience.” You’re stuck in the
+          paradox: you need experience to get the job, but you need the job to get experience. This coaching practice
+          exists to break that loop.
+        </p>
+      </div>
+
+      <h3>Core Promise</h3>
+      <div class="card">
+        <p>
+          Instead of generic career advice, candidates get concrete assets: a resume that passes filters, a LinkedIn
+          profile that attracts recruiters, and interview stories that demonstrate readiness for enterprise work.
+        </p>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p><strong>Email:</strong> <a href="mailto:info@wheelerfurtune.com">info@wheelerfurtune.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></p>
-                    <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm</p>
-                </div>
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!-- 2b. Assets: Resume & Cover Letter Templates -->
+    <section id="assets">
+      <h2>2. Candidate Assets: Resume & Cover Letter Frameworks</h2>
+
+      <h3>Part 1: Entry-Level Corporate Resume Template</h3>
+      <div class="template-block">
+        <code>
+[YOUR FULL NAME]
+
+[City, State] | [Phone Number] | [Professional Email] | [LinkedIn URL]
+
+PROFESSIONAL SUMMARY
+Detail-oriented professional with a strong foundation in [Skill 1] and [Skill 2]. Proven ability to [mention a key result].
+Seeking to leverage academic background and practical project experience to drive efficiency at an enterprise level.
+
+TECHNICAL SKILLS
+• Software & Tools: [e.g., Revit, SQL, Tableau, Excel, Python]
+• Core Competencies: [e.g., Building Information Modeling (BIM), Data Visualization, Workflow Automation, Process Improvement]
+
+PROFESSIONAL EXPERIENCE
+[Company Name or University Department] — [City, State]
+[Your Title, e.g., Junior Analyst] | [Month, Year] – [Month, Year]
+• Spearheaded the migration of [Data/Project Type], reducing data retrieval time by 15% across the department.
+• Collaborated with a cross-functional team of 4 to analyze [specific dataset/problem], presenting findings that led to a [specific positive outcome].
+• Audited and resolved [number] of data discrepancies using [Tool/Software], ensuring 100% compliance with internal reporting standards.
+
+EDUCATION
+[University Name] — [City, State]
+[Degree Name] | [Graduation Month, Year]
+        </code>
+      </div>
+
+      <h3>Part 2: “Plug-and-Play” Cover Letter Framework</h3>
+      <div class="template-block">
+        <code>
+[Date]
+
+[Hiring Manager's Name]
+[Company Name]
+
+Dear [Hiring Manager's Name],
+
+[The Hook]:
+I am writing to express my strong interest in the [Target Role] position at [Company Name].
+With a proven track record in structuring complex datasets and a deep appreciation for your recent initiatives,
+I am eager to bring my technical background and analytical approach to your team.
+
+[The Value-Add]:
+During my time at [Previous Company/University], I recognized a bottleneck in how we processed [specific task].
+By implementing a new workflow using [Tool/Method], we reduced [metric] by [X%] and improved [business outcome].
+
+[Alignment & Motivation]:
+Your focus on [Company Initiative or Value] resonates with my experience in [related project or skill].
+I am particularly excited about the opportunity to contribute to [specific team or program].
+
+[Close]:
+Thank you for considering my application. I would welcome the opportunity to discuss how my skills and experience
+can support [Company Name]'s goals.
+
+Sincerely,
+[Your Full Name]
+        </code>
+      </div>
+
+      <h3>Behavioral Interview Question Bank</h3>
+      <div class="card">
+        <p><strong>Communication & Cross-Functional Teamwork</strong></p>
+        <ul>
+          <li>Tell me about a time you had to explain a complex technical concept to a non-technical person.</li>
+          <li>Describe a time you disagreed with a team member. How did you resolve it?</li>
+        </ul>
+        <p><strong>Drive & Results Orientation</strong></p>
+        <ul>
+          <li>Tell me about a time you went above and beyond your core responsibilities.</li>
+          <li>Describe a long-term goal you set and how you achieved it.</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Wheeler Fortune Notary. All rights reserved.</p>
-            <p>Licensed and Bonded Notary Public</p>
-        </div>
-    </footer>
+    <!-- 3. Enterprise Readiness Audit -->
+    <section id="audit">
+      <h2>3. The Enterprise Readiness Audit (Premium Upsell)</h2>
+      <p>
+        Position this as a diagnostic tool that identifies exactly where a candidate will fail a technical interview
+        or struggle in their first 90 days on the job. 
+      </p>
+
+      <h3>Product Concept & Pricing</h3>
+      <div class="grid grid-3">
+        <article class="card">
+          <span class="pill">Add-On</span>
+          <h3>Audit Upsell</h3>
+          <p><strong>Price:</strong> +$49 at checkout with the Corporate Starter Kit.</p>
+          <p><strong>Use:</strong> Attach to core packages to deepen insight into readiness gaps.</p>
+        </article>
+
+        <article class="card">
+          <span class="pill">Standalone</span>
+          <h3>Readiness Audit Only</h3>
+          <p><strong>Price Range:</strong> $75 – $99.</p>
+          <p><strong>Use:</strong> For candidates who already have assets but need a diagnostic on enterprise fit.</p>
+        </article>
+
+        <article class="card">
+          <span class="pill">VIP Bundle</span>
+          <h3>VIP Coaching Bundle</h3>
+          <p><strong>Price:</strong> $199.</p>
+          <ul>
+            <li>Resume Rewrite</li>
+            <li>Mock Interview</li>
+            <li>Enterprise Readiness Audit</li>
+          </ul>
+        </article>
+      </div>
+
+      <h3>Intake Questionnaire</h3>
+      <div class="card">
+        <h3>Part 1: Baseline Technical Proficiency</h3>
+        <ul>
+          <li>
+            Rate your current proficiency with the following tools (1 = Beginner, 5 = Can build from scratch without tutorials):
+            SQL, Advanced Excel, BI Tools, Modeling Software, Scripting.
+          </li>
+          <li>
+            In 3–4 sentences, describe the most complex technical project, data model, or dashboard you have built entirely on your own.
+          </li>
+        </ul>
+
+        <h3>Part 2: Scenario-Based Autonomy & Ambiguity</h3>
+        <ul>
+          <li><strong>Scenario 1 – The Incomplete Dataset:</strong> You are assigned to update a critical, weekly performance model. The report is due tomorrow at 9:00 AM. 15% of the data is missing. Your manager is out of the office. Walk through the exact steps you take.</li>
+          <li><strong>Scenario 2 – The Vague Stakeholder:</strong> A VP sends an email: “I need a dashboard that shows how our department is doing this quarter compared to last year. Get it to me by Friday.” Draft your exact email reply to scope the requirements.</li>
+          <li><strong>Scenario 3 – Conflicting Priorities:</strong> You are working on an engineering integration due Wednesday. The Director of Finance asks for an urgent data pull for a presentation happening at 2:00 PM today. How do you handle the competing deadlines?</li>
+        </ul>
+
+        <h3>Part 3: Quality Control & Governance</h3>
+        <ul>
+          <li><strong>Scenario 4 – The Production Error:</strong> You built a model that tracks project costs. It was sent to leadership yesterday. Today, you realize you made a calculation error skewing the estimate by 5%. No one else has noticed. What are your immediate next three steps?</li>
+          <li><strong>Scenario 5 – The Validation Process:</strong> Before you send a finalized dataset to a senior stakeholder, what is your personal, step-by-step process for validating that your output is 100% accurate?</li>
+        </ul>
+
+        <h3>Part 4: Self-Awareness & Growth</h3>
+        <ul>
+          <li>Looking at target roles, what is the single technical requirement or software that intimidates you the most, and how are you currently trying to learn it?</li>
+          <li>On a scale of 1 to 10, how comfortable are you taking ownership of a project where the rules and deliverables are not clearly defined by your manager?</li>
+        </ul>
+      </div>
+
+      <h3>Final Report Template</h3>
+      <div class="template-block">
+        <code>
+THE ENTERPRISE READINESS AUDIT
+
+Client Name: [Client Full Name]
+Target Role: [e.g., Junior Data Analyst]
+Date of Audit: [Date]
+Evaluator: [Your Name]
+
+1. Executive Summary
+• Overall Enterprise Readiness: [e.g., Needs Improvement / Nearing Competency / Interview-Ready]
+• Key Strength: [e.g., Strong foundational knowledge of SQL and database querying.]
+• Primary Risk Area: [e.g., Operating with ambiguity; tendency to wait for perfect instructions.]
+
+2. The Technical Skill Matrix
+• [Skill/Tool] | Self-Rating: [4/5] | Enterprise Requirement: [4/5] | Status: [Aligned]
+• [Skill/Tool] | Self-Rating: [2/5] | Enterprise Requirement: [3/5] | Status: [Needs Work]
+Technical Feedback: [Insert 2–3 sentences of feedback here.]
+
+3. Autonomy & Workflow Evaluation
+• Problem Solving Without Directives: [Score]
+• Stakeholder Communication: [Score]
+• Quality Assurance & Risk Management: [Score]
+
+Scenario Feedback Breakdown:
+• The Incomplete Dataset: [Insert feedback]
+• The Vague Stakeholder: [Insert feedback]
+• The Production Error: [Insert feedback]
+
+4. The Gap Analysis
+1. [Identify Gap 1, e.g., Business Context]
+2. [Identify Gap 2, e.g., Quality Control Rigor]
+3. [Identify Gap 3, e.g., Boundary Setting]
+
+5. Your 30-Day Action Plan
+• Step 1: [Give a specific technical task]
+• Step 2: [Give a specific communication task]
+• Step 3: [Give a specific workflow task]
+        </code>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Entry-Level Career Coaching. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
